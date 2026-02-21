@@ -1,0 +1,72 @@
+:root {
+  --bg-primary: #0d1117;
+  --bg-card: #161b22;
+  --bg-surface: #21262d;
+  --accent: #f7b731;
+  --text-primary: #e6edf3;
+  --text-muted: #8b949e;
+  --border: #30363d;
+  --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-family);
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Navbar Laterale */
+.sidebar {
+  width: 240px;
+  background-color: var(--bg-card);
+  border-right: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  padding: 20px 0;
+}
+
+.brand {
+  font-size: 18px; font-weight: bold; color: var(--text-primary);
+  padding: 0 20px 20px; border-bottom: 1px solid var(--border);
+  margin-bottom: 20px; display: flex; align-items: center; gap: 10px;
+}
+
+.nav-link {
+  color: var(--text-muted); text-decoration: none;
+  padding: 12px 20px; font-size: 14px; font-weight: 500;
+  transition: all 0.2s ease; border-left: 3px solid transparent;
+}
+
+.nav-link:hover { color: var(--text-primary); background-color: var(--bg-surface); }
+.nav-link.active { color: var(--accent); background-color: var(--bg-surface); border-left-color: var(--accent); }
+
+/* Contenitore Principale */
+.main-content {
+  flex: 1; display: flex; flex-direction: column;
+}
+
+.header {
+  padding: 20px 30px; border-bottom: 1px solid var(--border);
+  background-color: var(--bg-primary);
+}
+
+.header h1 { font-size: 20px; }
+.header p { font-size: 13px; color: var(--text-muted); margin-top: 4px; }
+
+/* Wrapper per Looker Studio */
+.dashboard-wrapper {
+  flex: 1; padding: 20px 30px; background-color: var(--bg-primary);
+}
+
+.iframe-container {
+  width: 100%; height: 100%;
+  border-radius: 12px; border: 1px solid var(--border);
+  background-color: var(--bg-card); overflow: hidden;
+}
+
+iframe { width: 100%; height: 100%; border: none; display: block; }
